@@ -83,8 +83,10 @@ canvas?.addEventListener('click', function (e) {
     board[x][y] = currentPlayer;
     drawPiece(x, y, currentPlayer);
     if (checkWin(x, y, currentPlayer)) {
-      setTimeout(() => alert((currentPlayer === 1 ? "黑棋" : "白棋") + " 获胜！"), 10);
       gameOver = true;
+      setTimeout(() => {
+        alert((currentPlayer === 1 ? "黑棋" : "白棋") + " 获胜！");
+      }, 10);
       return;
     }
     currentPlayer = 3 - currentPlayer;
