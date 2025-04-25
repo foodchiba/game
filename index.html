@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>五子棋游戏</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>欢迎来到五子棋世界</h1>
+    <nav>
+      <button onclick="showSection('about')">About</button>
+      <button onclick="showSection('game')">游戏</button>
+    </nav>
+  </header>
+
+  <img src="image.jpg" alt="展示图片" class="main-image" />
+
+  <section id="about" class="content-section">
+    <h2>关于游戏</h2>
+    <p>这是一个经典的五子棋游戏。你可以和电脑或朋友对战，尝试在 15x15 的棋盘上率先连成五子。</p>
+  </section>
+
+  <section id="game" class="content-section" style="display:none;">
+    <h2>五子棋游戏</h2>
+    <canvas id="chess" width="450" height="450"></canvas>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
